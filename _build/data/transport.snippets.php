@@ -30,12 +30,23 @@ $snippets = array();
 $snippets[0]= $modx->newObject('modSnippet');
 $snippets[0]->fromArray(array(
     'id' => 0,
-    'name' => 'TeamLister',
-    'description' => 'Displays Items.',
+    'name' => 'getTeam',
+    'description' => 'Displays teams details.',
+    'snippet' => getSnippetContent($sources['source_core'].'/elements/snippets/snippet.getteam.php'),
+),'',true,true);
+$properties = include $sources['build'].'properties/properties.getteam.php';
+$snippets[0]->setProperties($properties);
+unset($properties);
+
+$snippets[1]= $modx->newObject('modSnippet');
+$snippets[1]->fromArray(array(
+    'id' => 1,
+    'name' => 'teamLister',
+    'description' => 'Displays members details.',
     'snippet' => getSnippetContent($sources['source_core'].'/elements/snippets/snippet.teamlister.php'),
 ),'',true,true);
 $properties = include $sources['build'].'properties/properties.teamlister.php';
-$snippets[0]->setProperties($properties);
+$snippets[1]->setProperties($properties);
 unset($properties);
 
 return $snippets;
