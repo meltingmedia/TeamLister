@@ -35,7 +35,7 @@ set_time_limit(0);
 define('PKG_NAME','TeamLister');
 define('PKG_NAME_LOWER',strtolower(PKG_NAME));
 define('PKG_VERSION','1.0.0');
-define('PKG_RELEASE','rc1');
+define('PKG_RELEASE','beta1');
 
 /* define sources */
 $root = dirname(dirname(__FILE__)).'/';
@@ -104,19 +104,9 @@ $attr = array(
                     xPDOTransport::UPDATE_OBJECT => true,
                     xPDOTransport::UNIQUE_KEY => 'name',
                 ),
-                'Chunks' => array(
-                    xPDOTransport::PRESERVE_KEYS => false,
-                    xPDOTransport::UPDATE_OBJECT => true,
-                    xPDOTransport::UNIQUE_KEY => 'name',
-                ),
             ),
         ),
         'Snippets' => array(
-            xPDOTransport::PRESERVE_KEYS => false,
-            xPDOTransport::UPDATE_OBJECT => true,
-            xPDOTransport::UNIQUE_KEY => 'name',
-        ),
-        'Chunks' => array (
             xPDOTransport::PRESERVE_KEYS => false,
             xPDOTransport::UPDATE_OBJECT => true,
             xPDOTransport::UNIQUE_KEY => 'name',

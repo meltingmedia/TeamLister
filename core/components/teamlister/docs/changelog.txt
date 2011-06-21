@@ -1,5 +1,5 @@
 Changelog for TeamLister.
 
-TeamLister 1.0.0
-==============
+TeamLister 1.0.0-beta1
+================================================================================
 - Initial release.

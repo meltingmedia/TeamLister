@@ -81,7 +81,7 @@ $generator->mapHeader= <<<EOD
  */
 EOD;
 //$generator->parseSchema($sources['model'] . 'schema/'.PKG_NAME_LOWER.'.mysql.schema.xml', $sources['model']);
-$generator->parseSchema(dirname(__FILE__) . 'schema/'.PKG_NAME_LOWER.'.mysql.schema.xml', $sources['model']);
+$generator->parseSchema(dirname(__FILE__) . '/schema/'.PKG_NAME_LOWER.'.mysql.schema.xml', $sources['model']);
 
 
 $mtime= microtime();

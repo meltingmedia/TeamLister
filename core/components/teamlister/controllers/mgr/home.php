@@ -25,7 +25,8 @@
  * @package teamlister
  * @subpackage controllers
  */
-$modx->regClientStartupScript($TeamLister->config['jsUrl'].'mgr/widgets/items.grid.js');
+$modx->regClientStartupScript($TeamLister->config['jsUrl'].'mgr/widgets/sections.grid.js');
+$modx->regClientStartupScript($TeamLister->config['jsUrl'].'mgr/widgets/teams.grid.js');
 $modx->regClientStartupScript($TeamLister->config['jsUrl'].'mgr/widgets/home.panel.js');
 $modx->regClientStartupScript($TeamLister->config['jsUrl'].'mgr/sections/home.js');
 $output = '<div id="teamlister-panel-home-div"></div>';

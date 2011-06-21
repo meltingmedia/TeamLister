@@ -14,11 +14,15 @@
         <field key="section" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" default="" />
         <field key="role" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
 
+        <field key="menuindex" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" default="" />
+
         <aggregate alias="Section" class="tmSection" local="section" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
     <object class="tmSection" table="teamlister_sections" extends="xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="100" phptype="string" null="false" default="" index="index" />
+        <field key="description" dbtype="text" phptype="text" null="false" default="" />
+        <field key="menuindex" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" default="" />
 
         <aggregate alias="Member" class="TeamMember" local="id" foreign="section" cardinality="many" owner="local" />
     </object>

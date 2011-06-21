@@ -25,16 +25,46 @@
  * @package teamlister
  * @subpackage lexicon
  */
-$_lang['teamlister'] = 'TeamLister';
-$_lang['teamlister.menu_desc'] = 'A sample Extra to develop from.';
-$_lang['teamlister.items'] = 'Items';
-$_lang['teamlister.item_create'] = 'Create Item';
-$_lang['teamlister.item_err_ae'] = 'An Item already exists with that name.';
-$_lang['teamlister.item_err_nf'] = 'Item not found.';
-$_lang['teamlister.item_err_ns'] = 'Item not specified.';
-$_lang['teamlister.item_err_remove'] = 'An error occurred while trying to remove the Item.';
-$_lang['teamlister.item_err_save'] = 'An error occurred while trying to save the Item.';
-$_lang['teamlister.item_remove'] = 'Remove Item';
-$_lang['teamlister.item_remove_confirm'] = 'Are you sure you want to remove this Item?';
-$_lang['teamlister.item_update'] = 'Update Item';
-$_lang['teamlister.intro_msg'] = 'Manage your items.';
+$_lang['teamlister'] = 'Team Lister';
+$_lang['teamlister.intro_msg'] = 'Gérez vos équipes et leurs membres.';
+
+$_lang['teamlister.member_bio'] = 'Informations du membre';
+$_lang['teamlister.member_create'] = 'Ajouter un membre';
+$_lang['teamlister.member_email'] = 'E-mail';
+$_lang['teamlister.member_err_ae'] = 'Un membre ayant les mêmes nom et prénom existe déjà.';
+$_lang['teamlister.member_err_nf'] = 'Membre non trouvé.';
+$_lang['teamlister.member_err_ns'] = 'Membre non indiqué.';
+$_lang['teamlister.member_err_remove'] = 'Une erreur est survenue lors de la suppression du membre.';
+$_lang['teamlister.member_err_save'] = 'Une erreur est survenue lors de la sauvegarde du membre.';
+$_lang['teamlister.member_firstname'] = 'Prénom';
+$_lang['teamlister.member_name'] = 'Nom';
+$_lang['teamlister.member_order'] = 'Position';
+$_lang['teamlister.member_phone'] = 'Téléphone';
+$_lang['teamlister.member_photo'] = 'Photo';
+$_lang['teamlister.member_remove'] = 'Supprimer le membre';
+$_lang['teamlister.member_remove_confirm'] = 'Êtes-vous sûr de vouloir supprimer ce membre ?';
+$_lang['teamlister.member_role'] = 'Fonction';
+$_lang['teamlister.member_section'] = 'Équipe';
+$_lang['teamlister.member_update'] = 'Mettre à jour les informations';
+$_lang['teamlister.member_website'] = 'Site internet';
+$_lang['teamlister.members'] = 'Vos membres';
+
+$_lang['teamlister.menu_desc'] = 'Liste les membres de  vos équipes.';
+$_lang['teamlister.row_order'] = 'Classer par glisser-déposer n\'est pas encore possible.';
+
+$_lang['teamlister.section_combo_blank'] = 'Vous devez d\'abord créer une équipe';
+$_lang['teamlister.section_combo_empty'] = 'Choisissez une équipe…';
+$_lang['teamlister.section_create'] = 'Créer une équipe';
+$_lang['teamlister.section_desc'] = 'Description';
+$_lang['teamlister.section_err_ae'] = 'Une équipe pourtant ce nom existe déjà.';
+$_lang['teamlister.section_err_nf'] = 'Équipe non trouvée.';
+$_lang['teamlister.section_err_ns'] = 'Équipe non indiquée.';
+$_lang['teamlister.section_err_remove'] = 'Une erreur est survenue lors de la suppression de l\'équipe.';
+$_lang['teamlister.section_err_save'] = 'Une erreur est survenue lors de la sauvegarde de l\'équipe.';
+$_lang['teamlister.section_name'] = 'Nom de l\'équipe';
+$_lang['teamlister.section_menuindex'] = 'Position';
+$_lang['teamlister.section_remove'] = 'Supprimer l\'équipe';
+$_lang['teamlister.section_remove_confirm'] = 'Êtes-vous sûr de vouloir supprimer cette équipe ?';
+$_lang['teamlister.section_update'] = 'Mettre à jour les informations';
+$_lang['teamlister.sections'] = 'Vos équipes';
+$_lang['teamlister.sections_intro_msg'] = 'Créez des équipes.';

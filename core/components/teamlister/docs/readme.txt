@@ -1,11 +1,11 @@
---------------------
+--------------------------------------------------------------------------------
 TeamLister
---------------------
-Version: 1.0.0
-Author: John Doe <john@doe.com>
---------------------
+--------------------------------------------------------------------------------
+Version: 1.0.0-beta1
+Author: Romain Tripault // Melting Media <romain@melting-media.com>
+--------------------------------------------------------------------------------
 
-A basic Extra for MODx Revolution.
+Manage & display your teams and their members.
 
 Feel free to suggest ideas/improvements/bugs on GitHub:
-http://github.com/username/TeamLister/issues
+https://github.com/MeltingMedia/TeamLister/issues

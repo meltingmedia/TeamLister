@@ -20,26 +20,22 @@
  * @package teamlister
  */
 /**
- * Resolve creating db tables
- *
+ * Update a member details
+ * 
  * @package teamlister
- * @subpackage build
+ * @subpackage processors
  */
-if ($object->xpdo) {
-    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
-        case xPDOTransport::ACTION_INSTALL:
-            $modx =& $object->xpdo;
-            $modelPath = $modx->getOption('teamlister.core_path',null,$modx->getOption('core_path').'components/teamlister/').'model/';
-            $modx->addPackage('teamlister',$modelPath);
+// get board
+if (empty($scriptProperties['id'])) return $modx->error->failure($modx->lexicon('teamlister.member_err_ns'));
+$member = $modx->getObject('TeamMember',$scriptProperties['id']);
+if (!$member) return $modx->error->failure($modx->lexicon('teamlister.member_err_nf'));
 
-            $manager = $modx->getManager();
+$member->fromArray($scriptProperties);
 
-            $manager->createObjectContainer('TeamMember');
-            $manager->createObjectContainer('tmSection');
-
-            break;
-        case xPDOTransport::ACTION_UPGRADE:
-            break;
-    }
+if ($member->save() == false) {
+    return $modx->error->failure($modx->lexicon('teamlister.member_err_save'));
 }
-return true;
+
+// output
+$memberArray = $member->toArray('',true);
+return $modx->error->success('',$memberArray);

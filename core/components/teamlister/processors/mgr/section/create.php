@@ -20,26 +20,27 @@
  * @package teamlister
  */
 /**
- * Resolve creating db tables
- *
+ * Create a section
+ * 
  * @package teamlister
- * @subpackage build
+ * @subpackage processors
  */
-if ($object->xpdo) {
-    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
-        case xPDOTransport::ACTION_INSTALL:
-            $modx =& $object->xpdo;
-            $modelPath = $modx->getOption('teamlister.core_path',null,$modx->getOption('core_path').'components/teamlister/').'model/';
-            $modx->addPackage('teamlister',$modelPath);
-
-            $manager = $modx->getManager();
-
-            $manager->createObjectContainer('TeamMember');
-            $manager->createObjectContainer('tmSection');
-
-            break;
-        case xPDOTransport::ACTION_UPGRADE:
-            break;
-    }
+$alreadyExists = $modx->getObject('tmSection',array(
+    'name' => $_POST['name'],
+));
+if ($alreadyExists) {
+    $modx->error->addField('name',$modx->lexicon('teamlister.section_err_ae'));
 }
-return true;
+
+if ($modx->error->hasError()) {
+    return $modx->error->failure();
+}
+
+$section = $modx->newObject('tmSection');
+$section->fromArray($_POST);
+
+if ($section->save() == false) {
+    return $modx->error->failure($modx->lexicon('teamlister.section_err_save'));
+}
+
+return $modx->error->success('',$section);

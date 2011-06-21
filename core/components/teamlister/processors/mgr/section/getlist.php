@@ -20,26 +20,24 @@
  * @package teamlister
  */
 /**
- * Resolve creating db tables
+ * Get a list of Sections
  *
  * @package teamlister
- * @subpackage build
+ * @subpackage processors
  */
-if ($object->xpdo) {
-    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
-        case xPDOTransport::ACTION_INSTALL:
-            $modx =& $object->xpdo;
-            $modelPath = $modx->getOption('teamlister.core_path',null,$modx->getOption('core_path').'components/teamlister/').'model/';
-            $modx->addPackage('teamlister',$modelPath);
+$sort = $modx->getOption('sort',$_REQUEST,'name');
+$dir = $modx->getOption('dir',$_REQUEST,'ASC');
 
-            $manager = $modx->getManager();
+$c = $modx->newQuery('tmSection');
+$count = $modx->getCount('tmSection',$c);
 
-            $manager->createObjectContainer('TeamMember');
-            $manager->createObjectContainer('tmSection');
+$c->sortby($sort,$dir);
 
-            break;
-        case xPDOTransport::ACTION_UPGRADE:
-            break;
-    }
+$sections = $modx->getCollection('tmSection',$c);
+
+$list = array();
+foreach ($sections as $section) {
+    $sectionArray = $section->toArray();
+    $list[]= $sectionArray;
 }
-return true;
+return $this->outputArray($list,$count);

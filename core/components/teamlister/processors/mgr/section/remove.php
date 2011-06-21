@@ -20,26 +20,20 @@
  * @package teamlister
  */
 /**
- * Resolve creating db tables
- *
+ * Remove a section.
+ * 
  * @package teamlister
- * @subpackage build
+ * @subpackage processors
  */
-if ($object->xpdo) {
-    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
-        case xPDOTransport::ACTION_INSTALL:
-            $modx =& $object->xpdo;
-            $modelPath = $modx->getOption('teamlister.core_path',null,$modx->getOption('core_path').'components/teamlister/').'model/';
-            $modx->addPackage('teamlister',$modelPath);
+/* get board */
+if (empty($scriptProperties['id'])) return $modx->error->failure($modx->lexicon('teamlister.section_err_ns'));
+$section = $modx->getObject('tmSection',$scriptProperties['id']);
 
-            $manager = $modx->getManager();
+if (!$section) return $modx->error->failure($modx->lexicon('teamlister.section_err_nf'));
 
-            $manager->createObjectContainer('TeamMember');
-            $manager->createObjectContainer('tmSection');
-
-            break;
-        case xPDOTransport::ACTION_UPGRADE:
-            break;
-    }
+if ($section->remove() == false) {
+    return $modx->error->failure($modx->lexicon('teamlister.section_err_remove'));
 }
-return true;
+
+/* output */
+return $modx->error->success('',$section);
