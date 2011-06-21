@@ -19,6 +19,11 @@ $limit = isset($limit) ? (integer) $limit : 0;
 $offset = isset($offset) ? (integer) $offset : 0;
 $totalVar = !empty($totalVar) ? $totalVar : 'total';
 
+// create the tables
+/*$m = $modx->getManager();
+$m->createObjectContainer('TeamMember');
+$m->createObjectContainer('tmSection');
+return 'Tables created.';*/
 
 // build query
 $c = $modx->newQuery('tmSection');
@@ -56,8 +61,8 @@ $list = array();
 foreach ($sections as $section) {
     $sectionInfos = $section->toArray();
     $modx->setPlaceholder('idx',$idx);
-    /*$members = $modx->getCount('TeamMember');
-    $modx->setPlaceholder('child',$members);*/
+    //$members = $modx->getCount('TeamMember');
+    //$modx->setPlaceholder('child',$members);
     $list[] = $TeamLister->getChunk($tpl,$sectionInfos);
     $idx++;
 }

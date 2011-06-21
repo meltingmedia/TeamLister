@@ -20,14 +20,19 @@
  * @package teamlister
  */
 /**
- * Properties English Lexicon Entries for TeamLister
+ * Properties English Lexicon Entries for TeamLister snippets
  *
  * @package teamlister
  * @subpackage lexicon
  */
-$_lang['prop_teamlister.limit_desc'] = 'The number of Items to limit per page.';
-$_lang['prop_teamlister.outputseparator_desc'] = 'A string to separate each row with.';
-$_lang['prop_teamlister.sortby_desc'] = 'The field to sort by.';
-$_lang['prop_teamlister.sortdir_desc'] = 'The direction to sort by.';
-$_lang['prop_teamlister.tpl_desc'] = 'The chunk to use for each row of Items.';
-$_lang['prop_teamlister.toplaceholder_desc'] = 'If set, will output the content to the placeholder specified in this property, rather than outputting the content directly.';
+$_lang['prop_teamlister.teamlister_debug_desc'] = 'Outputs the SQL query to the error log if set to 1.';
+$_lang['prop_teamlister.teamlister_idx_desc'] = 'You can define the starting idx of the members, which is a property that is incremented as each member is rendered (default = 1).';
+$_lang['prop_teamlister.teamlister_limit_desc'] = 'The number of members to limit per page.';
+$_lang['prop_teamlister.teamlister_offset_desc'] = 'An offset of members returned by the criteria to skip.';
+//$_lang['prop_teamlister.teamlister_outputseparator_desc'] = 'A string to separate each row with.';
+$_lang['prop_teamlister.teamlister_sortby_desc'] = 'Field(s) to sort by (ex. &sortBy=`fieldname` or &sortBy=`{"fieldname":"sort dir","fieldname":"DESC"}`).';
+$_lang['prop_teamlister.teamlister_sortdir_desc'] = 'The direction to sort by (ASC or DESC).';
+$_lang['prop_teamlister.teamlister_tpl_desc'] = 'The chunk to use for each member.';
+$_lang['prop_teamlister.teamlister_toplaceholder_desc'] = 'If set, will output the content to the placeholder specified in this property, rather than outputting the content directly.';
+$_lang['prop_teamlister.teamlister_totalVar_desc'] = 'Placeholder name for the "total number of members" (default = total).';
+$_lang['prop_teamlister.teamlister_where_desc'] = 'A JSON expression of criteria to build any additional where clauses from, e.g. &where=`{{"name:LIKE":"foo%", "OR:name:LIKE":"%bar"},{"OR:firstname:=":"foobar", "AND:name:=":"raboof"}}`.';

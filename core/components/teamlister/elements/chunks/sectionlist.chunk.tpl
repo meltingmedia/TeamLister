@@ -9,8 +9,6 @@
     &type=`php`
 
     &where=`{"section":[[+id]]}`
-    &sortBy=`{"menuindex":"ASC","name":"ASC"}`
-    &limit=`0`
 ]]
     </ul>
 </div>

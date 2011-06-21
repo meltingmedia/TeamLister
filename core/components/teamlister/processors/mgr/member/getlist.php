@@ -28,32 +28,23 @@
 $isLimit = !empty($_REQUEST['limit']);
 $start = $modx->getOption('start',$_REQUEST,0);
 $limit = $modx->getOption('limit',$_REQUEST,20);
-$sort = $modx->getOption('sort',$_REQUEST,'name');
+$sort = $modx->getOption('sort',$_REQUEST,'lastname');
 $dir = $modx->getOption('dir',$_REQUEST,'ASC');
 
 $c = $modx->newQuery('TeamMember');
-/*$c->select('TeamMember.*, Section.name');
-$c->leftJoin('tmSection','Section');*/
+$c->select('TeamMember.*, Section.name');
+$c->leftJoin('tmSection','Section');
 $count = $modx->getCount('TeamMember',$c);
 
 $c->sortby($sort,$dir);
 if ($isLimit) $c->limit($limit,$start);
 
 $members = $modx->getCollection('TeamMember',$c);
-//$members = $modx->getCollectionGraph('TeamMember','{ "Section":{} }',$c);
 
 $list = array();
 foreach ($members as $member) {
     $memberArray = $member->toArray();
-    //$memberArray['Section'] = ($member->Section) ? $member->Section->get('name') : 'not set';
     $list[]= $memberArray;
 }
 
-/*$results = array(
-    'success' => true,
-    'total' => count($list),
-    'results' => $list,
-);*/
-
 return $this->outputArray($list,$count);
-//return $modx->toJSON($results);

@@ -1,6 +1,9 @@
         <li class="vcard"><!--[[+idx]]/[[+total]] of team id [[+section]]-->
-            <p><span class="fn">[[+firstname]] [[+name]]</span> - <span class="role">[[+role]]</span></p>
+            <div>[[+photo:notempty=`
+                <img src="[[+photo]]" alt="" class="photo" />`]]
+                <span class="fn">[[+firstname]] [[+lastname]]</span> - <span class="role">[[+role]]</span>
             [[+bio]]
+            </div>
 
             <div>[[+phone:notempty=`
                 <span class="tel">[[+phone]]</span>`]][[+email:notempty=`

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model package="teamlister" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="teamlister">
     <object class="TeamMember" table="teamlister_members" extends="xPDOSimpleObject">
-        <field key="name" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
+        <field key="lastname" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
         <field key="firstname" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
 
         <field key="email" dbtype="varchar" precision="100" phptype="string" null="false" default="" />

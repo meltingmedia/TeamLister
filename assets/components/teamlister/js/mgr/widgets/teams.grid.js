@@ -7,7 +7,7 @@ TeamLister.grid.Members = function(config) {
         ,baseParams: {
             action: 'mgr/member/getlist'
         }
-        ,fields: ['id','name','firstname','section','role','menuindex'/**/,'bio','email','phone','photo','website']
+        ,fields: ['id','lastname','firstname','name','section','role','menuindex'/**/,'bio','email','phone','photo','website']
         ,autoHeight: true
         ,paging: true
         ,remoteSort: true
@@ -30,13 +30,12 @@ TeamLister.grid.Members = function(config) {
             ,width: 200
         },{
             header: _('teamlister.member_name')
-            ,dataIndex: 'name'
+            ,dataIndex: 'lastname'
             ,width: 200
         },{
             header: _('teamlister.member_section')
-            ,dataIndex: 'section'
+            ,dataIndex: 'name'
             ,width: 250
-            //,action: 'mgr/section/resolve'
         },{
             header: _('teamlister.member_role')
             ,dataIndex: 'role'
@@ -130,8 +129,8 @@ TeamLister.window.CreateMember = function(config) {
         ,fields: [{
             xtype: 'textfield'
             ,fieldLabel: _('teamlister.member_name')
-            ,name: 'name'
-            ,id: 'teamlister-'+this.ident+'-name'
+            ,name: 'lastname'
+            ,id: 'teamlister-'+this.ident+'-lastname'
             ,width: 400
         },{
             xtype: 'textfield'
@@ -153,7 +152,7 @@ TeamLister.window.CreateMember = function(config) {
             ,width: 400
         },{
             xtype: 'textfield'
-            ,inputType: 'file'
+            //,inputType: 'file'
             ,fieldLabel: _('teamlister.member_photo')
             ,name: 'photo'
             ,id: 'teamlister-'+this.ident+'-photo'
@@ -212,8 +211,8 @@ TeamLister.window.UpdateMember = function(config) {
         },{
             xtype: 'textfield'
             ,fieldLabel: _('teamlister.member_name')
-            ,name: 'name'
-            ,id: 'teamlister-'+this.ident+'-name'
+            ,name: 'lastname'
+            ,id: 'teamlister-'+this.ident+'-lastname'
             ,width: 400
         },{
             xtype: 'textfield'
@@ -235,7 +234,7 @@ TeamLister.window.UpdateMember = function(config) {
             ,width: 400
         },{
             xtype: 'textfield'
-            ,inputType: 'file'
+            //,inputType: 'file'
             ,fieldLabel: _('teamlister.member_photo')
             ,name: 'photo'
             ,id: 'teamlister-'+this.ident+'-photo'

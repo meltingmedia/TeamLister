@@ -7,7 +7,7 @@ $xpdo_meta_map['TeamMember']= array (
   'table' => 'teamlister_members',
   'fields' => 
   array (
-    'name' => '',
+    'lastname' => '',
     'firstname' => '',
     'email' => '',
     'phone' => '',
@@ -20,7 +20,7 @@ $xpdo_meta_map['TeamMember']= array (
   ),
   'fieldMeta' => 
   array (
-    'name' => 
+    'lastname' => 
     array (
       'dbtype' => 'varchar',
       'precision' => '100',

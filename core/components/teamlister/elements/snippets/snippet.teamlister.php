@@ -13,7 +13,7 @@ $tpl = isset($tpl) ? $tpl : 'memberlist';
 $outputSeparator = $modx->getOption('outputSeparator',$scriptProperties,"\n");
 
 $where = !empty($where) ? $modx->fromJSON($where) : array();
-$sortBy = $modx->getOption('sortBy',$scriptProperties,'name');
+$sortBy = $modx->getOption('sortBy',$scriptProperties,'lastname');
 $sortDir = $modx->getOption('sortDir',$scriptProperties,'ASC');
 $limit = isset($limit) ? (integer) $limit : 0;
 $offset = isset($offset) ? (integer) $offset : 0;
