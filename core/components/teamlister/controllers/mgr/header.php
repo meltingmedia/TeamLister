@@ -25,7 +25,7 @@
  * @package teamlister
  * @subpackage controllers
  */
-$modx->regClientCSS($TeamLister->config['cssUrl'].'mgr.css');
+//$modx->regClientCSS($TeamLister->config['cssUrl'].'mgr.css');
 $modx->regClientStartupScript($TeamLister->config['jsUrl'].'mgr/teamlister.js');
 
 $modx->regClientStartupScript($modx->config['assets_url'].'components/tinymce/jscripts/tiny_mce/tiny_mce.js');

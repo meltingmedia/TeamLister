@@ -20,7 +20,7 @@
  * @package teamlister
  */
 /**
- * Properties for the TeamLister snippet.
+ * Properties for the teamLister snippet.
  *
  * @package teamlister
  * @subpackage build
@@ -31,7 +31,7 @@ $properties = array(
         'desc' => 'prop_teamlister.teamlister_tpl_desc',
         'type' => 'textfield',
         'options' => '',
-        'value' => '',
+        'value' => 'memberlist',
         'lexicon' => 'teamlister:properties',
     ),
     array(
@@ -39,7 +39,7 @@ $properties = array(
         'desc' => 'prop_teamlister.teamlister_sortby_desc',
         'type' => 'textfield',
         'options' => '',
-        'value' => '{"menuindex":"ASC","name":"ASC"}',
+        'value' => '{"menuindex":"ASC","lastname":"ASC"}',
         'lexicon' => 'teamlister:properties',
     ),
     array(
@@ -58,7 +58,7 @@ $properties = array(
         'desc' => 'prop_teamlister.teamlister_limit_desc',
         'type' => 'textfield',
         'options' => '',
-        'value' => '',
+        'value' => 0,
         'lexicon' => 'teamlister:properties',
     ),
     array(
@@ -85,7 +85,7 @@ $properties = array(
         'desc' => 'prop_teamlister.teamlister_idx_desc',
         'type' => 'textfield',
         'options' => '',
-        'value' => '',
+        'value' => 1,
         'lexicon' => 'teamlister:properties',
     ),
     array(

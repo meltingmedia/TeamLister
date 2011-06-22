@@ -151,8 +151,7 @@ TeamLister.window.CreateMember = function(config) {
             ,id: 'teamlister-'+this.ident+'-phone'
             ,width: 400
         },{
-            xtype: 'textfield'
-            //,inputType: 'file'
+            xtype: 'modx-combo-browser'
             ,fieldLabel: _('teamlister.member_photo')
             ,name: 'photo'
             ,id: 'teamlister-'+this.ident+'-photo'
@@ -233,8 +232,7 @@ TeamLister.window.UpdateMember = function(config) {
             ,id: 'teamlister-'+this.ident+'-phone'
             ,width: 400
         },{
-            xtype: 'textfield'
-            //,inputType: 'file'
+            xtype: 'modx-combo-browser'
             ,fieldLabel: _('teamlister.member_photo')
             ,name: 'photo'
             ,id: 'teamlister-'+this.ident+'-photo'

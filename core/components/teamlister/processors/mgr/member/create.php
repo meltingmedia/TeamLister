@@ -26,11 +26,11 @@
  * @subpackage processors
  */
 $alreadyExists = $modx->getObject('TeamMember',array(
-    'name' => $_POST['name'],
+    'lastname' => $_POST['lastname'],
     'firstname' => $_POST['firstname'],
 ));
 if ($alreadyExists) {
-    $modx->error->addField('name',$modx->lexicon('teamlister.member_err_ae'));
+    $modx->error->addField('lastname',$modx->lexicon('teamlister.member_err_ae'));
 }
 
 if ($modx->error->hasError()) {
@@ -39,18 +39,6 @@ if ($modx->error->hasError()) {
 
 $member = $modx->newObject('TeamMember');
 $member->fromArray($_POST);
-$member->Section = 9;
-
-/*$member['section'] = $modx->getObject('tmSection', array('name' => $scriptProperties['section']));
-
-if (!empty($member['section'])) {
-    $c->addOne($member['section']);
-} else {
-    $member['section'] = $modx->newObject('tmSection');
-    $member['section']->set('name', $scriptProperties['section']);
-    $member['section']->save();
-    $c->addOne($member['section']);
-}*/
 
 if ($member->save() == false) {
     return $modx->error->failure($modx->lexicon('teamlister.member_err_save'));

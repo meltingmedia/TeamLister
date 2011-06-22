@@ -4,10 +4,7 @@
 
     <h3>Liste des membres</h3>
     <ul>
-[[!inc?
-    &file=`[[++teamlister.core_path]]elements/snippets/snippet.teamlister.php`
-    &type=`php`
-
+[[!teamLister?
     &where=`{"section":[[+id]]}`
 ]]
     </ul>

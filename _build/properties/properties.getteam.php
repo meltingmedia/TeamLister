@@ -20,7 +20,7 @@
  * @package teamlister
  */
 /**
- * Properties for the TeamLister snippet.
+ * Properties for the getTeams snippet.
  *
  * @package teamlister
  * @subpackage build
@@ -31,7 +31,7 @@ $properties = array(
         'desc' => 'prop_teamlister.getteam_tpl_desc',
         'type' => 'textfield',
         'options' => '',
-        'value' => 'Item',
+        'value' => 'sectionlist',
         'lexicon' => 'teamlister:properties',
     ),
     array(
@@ -39,14 +39,17 @@ $properties = array(
         'desc' => 'prop_teamlister.getteam_sortby_desc',
         'type' => 'textfield',
         'options' => '',
-        'value' => 'name',
+        'value' => '{"menuindex":"ASC","name":"ASC"}',
         'lexicon' => 'teamlister:properties',
     ),
     array(
         'name' => 'sortDir',
         'desc' => 'prop_teamlister.getteam_sortdir_desc',
         'type' => 'textfield',
-        'options' => '',
+        'options' => array(
+            array('text' => 'ASC', 'value' => 'ASC'),
+            array('text' => 'DESC', 'value' => 'DESC'),
+        ),
         'value' => 'ASC',
         'lexicon' => 'teamlister:properties',
     ),
@@ -55,15 +58,7 @@ $properties = array(
         'desc' => 'prop_teamlister.getteam_limit_desc',
         'type' => 'textfield',
         'options' => '',
-        'value' => 5,
-        'lexicon' => 'teamlister:properties',
-    ),
-    array(
-        'name' => 'outputSeparator',
-        'desc' => 'prop_teamlister.getteam_outputseparator_desc',
-        'type' => 'textfield',
-        'options' => '',
-        'value' => '',
+        'value' => 0,
         'lexicon' => 'teamlister:properties',
     ),
     array(
@@ -71,44 +66,47 @@ $properties = array(
         'desc' => 'prop_teamlister.getteam_toplaceholder_desc',
         'type' => 'textfield',
         'options' => '',
-        'value' => true,
+        'value' => false,
         'lexicon' => 'teamlister:properties',
     ),
     array(
         'name' => 'debug',
-        'desc' => 'prop_teamlister.getteam_',
+        'desc' => 'prop_teamlister.getteam_debug_desc',
         'type' => 'textfield',
-        'options' => '',
+        'options' => array(
+            array('text' => 'Yes', 'value' => '1'),
+            array('text' => 'No', 'value' => ''),
+        ),
         'value' => '',
         'lexicon' => 'teamlister:properties',
     ),
     array(
-        'name' => '',
-        'desc' => 'prop_teamlister.getteam_',
+        'name' => 'idx',
+        'desc' => 'prop_teamlister.getteam_idx_desc',
         'type' => 'textfield',
         'options' => '',
-        'value' => '',
+        'value' => 1,
         'lexicon' => 'teamlister:properties',
     ),
     array(
-        'name' => '',
-        'desc' => 'prop_teamlister.getteam_',
+        'name' => 'offset',
+        'desc' => 'prop_teamlister.getteam_offset_desc',
         'type' => 'textfield',
         'options' => '',
-        'value' => '',
+        'value' => 0,
         'lexicon' => 'teamlister:properties',
     ),
     array(
-        'name' => '',
-        'desc' => 'prop_teamlister.getteam_',
+        'name' => 'totalVar',
+        'desc' => 'prop_teamlister.getteam_totalVar_desc',
         'type' => 'textfield',
         'options' => '',
-        'value' => '',
+        'value' => 'total',
         'lexicon' => 'teamlister:properties',
     ),
     array(
-        'name' => '',
-        'desc' => 'prop_teamlister.getteam_',
+        'name' => 'where',
+        'desc' => 'prop_teamlister.getteam_where_desc',
         'type' => 'textfield',
         'options' => '',
         'value' => '',
