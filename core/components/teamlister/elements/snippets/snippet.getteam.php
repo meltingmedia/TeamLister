@@ -60,9 +60,18 @@ $list = array();
 
 foreach ($sections as $section) {
     $sectionInfos = $section->toArray();
-    $modx->setPlaceholder('idx',$idx);
-    //$members = $modx->getCount('TeamMember');
-    //$modx->setPlaceholder('child',$members);
+//You probably want this available in the chunk
+$sectionInfos['idx'] = $idx;
+
+$members = $section->getMany('Member');
+$membs = array();
+foreach ($members as $memb) {
+  if ($memb instanceof TeamMember) {
+    // Should probably use a getChunk here with $memb->toArray() instead.
+    $membs[] = $memb->get('firstname'). ' ' . $memb->get('lastname');
+  }
+}
+$sectionInfos['members'] = implode(', ',$membs);
     $list[] = $TeamLister->getChunk($tpl,$sectionInfos);
     $idx++;
 }
