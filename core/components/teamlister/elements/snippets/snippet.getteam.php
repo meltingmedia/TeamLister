@@ -9,7 +9,7 @@
 $TeamLister = $modx->getService('teamlister','TeamLister',$modx->getOption('teamlister.core_path',null,$modx->getOption('core_path').'components/teamlister/').'model/teamlister/',$scriptProperties);
 if (!($TeamLister instanceof TeamLister)) return '';
 
-$tpl = $modx->getOption('tpl',$scriptProperties,'sectionlist');
+$tpl = $modx->getOption('tpl',$scriptProperties,'sectionlist_bis');
 $outputSeparator = $modx->getOption('outputSeparator',$scriptProperties,"\n");
 
 $where = !empty($where) ? $modx->fromJSON($where) : array();
@@ -63,6 +63,21 @@ foreach ($sections as $section) {
     $modx->setPlaceholder('idx',$idx);
     //$members = $modx->getCount('TeamMember');
     //$modx->setPlaceholder('child',$members);
+    //$list[] = $TeamLister->getChunk($tpl,$sectionInfos);
+    //$idx++;
+    $members = $section->getMany('Member');
+    //$totalMembers = $modx->getCount($members);
+    //$modx->setPlaceholder('totalMembers',$totalMembers);
+    $memberList = array();
+
+    foreach ($members as $member) {
+        if ($member instanceof TeamMember) {
+            $memberDetails = $member->toArray();
+            //$memberList[] = $member->toArray();
+            $memberList[] = $TeamLister->getChunk('memberlist',$memberDetails);
+        } else { return 'not in class'; }
+    }
+    $sectionInfos['members'] = implode(',',$memberList);
     $list[] = $TeamLister->getChunk($tpl,$sectionInfos);
     $idx++;
 }

@@ -14,6 +14,12 @@ TeamLister.grid.Members = function(config) {
         ,enableDragDrop: true
         ,ddGroup: 'myRow'
         ,ddText: _('teamlister.row_order')
+        ,singleText: _('teamlister.member')
+        ,pluralText: _('teamlister.members')
+        ,grouping: true
+        ,groupBy: 'name'
+        ,sortBy: 'name'
+        ,sortDir: 'ASC'
         ,tbar: [{
             text: _('teamlister.member_create')
             ,handler: this.createMember
@@ -64,7 +70,7 @@ Ext.extend(TeamLister.grid.Members,MODx.grid.Grid,{
         });
         this.addContextMenuItem(m);
     }
-    
+
     ,createMember: function(btn,e) {
         if (!this.windows.createMember) {
             this.windows.createMember = MODx.load({
@@ -94,10 +100,10 @@ Ext.extend(TeamLister.grid.Members,MODx.grid.Grid,{
         this.windows.updateMember.fp.getForm().setValues(r);
         this.windows.updateMember.show(e.target);
     }
-    
+
     ,removeMember: function(btn,e) {
         if (!this.menu.record) return false;
-        
+
         MODx.msg.confirm({
             title: _('teamlister.member_remove')
             ,text: _('teamlister.member_remove_confirm')

@@ -28,6 +28,7 @@
 $_lang['teamlister'] = 'Team Lister';
 $_lang['teamlister.intro_msg'] = 'Gérez vos équipes et leurs membres.';
 
+$_lang['teamlister.member'] = 'Membre';
 $_lang['teamlister.member_bio'] = 'Informations du membre';
 $_lang['teamlister.member_create'] = 'Ajouter un membre';
 $_lang['teamlister.member_email'] = 'E-mail';
@@ -47,7 +48,7 @@ $_lang['teamlister.member_role'] = 'Fonction';
 $_lang['teamlister.member_section'] = 'Équipe';
 $_lang['teamlister.member_update'] = 'Mettre à jour les informations';
 $_lang['teamlister.member_website'] = 'Site internet';
-$_lang['teamlister.members'] = 'Vos membres';
+$_lang['teamlister.members'] = 'Membres';
 
 $_lang['teamlister.menu_desc'] = 'Liste les membres de  vos équipes.';
 $_lang['teamlister.row_order'] = 'Classer par glisser-déposer n\'est pas encore possible.';
@@ -66,5 +67,5 @@ $_lang['teamlister.section_menuindex'] = 'Position';
 $_lang['teamlister.section_remove'] = 'Supprimer l\'équipe';
 $_lang['teamlister.section_remove_confirm'] = 'Êtes-vous sûr de vouloir supprimer cette équipe ?';
 $_lang['teamlister.section_update'] = 'Mettre à jour les informations';
-$_lang['teamlister.sections'] = 'Vos équipes';
+$_lang['teamlister.sections'] = 'Équipes';
 $_lang['teamlister.sections_intro_msg'] = 'Créez des équipes.';

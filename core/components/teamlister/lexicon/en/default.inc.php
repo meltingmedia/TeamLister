@@ -28,6 +28,7 @@
 $_lang['teamlister'] = 'Team Lister';
 $_lang['teamlister.intro_msg'] = 'Manage your team members.';
 
+$_lang['teamlister.member'] = 'Member';
 $_lang['teamlister.member_bio'] = 'Member details';
 $_lang['teamlister.member_create'] = 'Add a member';
 $_lang['teamlister.member_email'] = 'Email';
@@ -47,7 +48,7 @@ $_lang['teamlister.member_role'] = 'Role';
 $_lang['teamlister.member_section'] = 'Team';
 $_lang['teamlister.member_update'] = 'Update member infos';
 $_lang['teamlister.member_website'] = 'Website';
-$_lang['teamlister.members'] = 'Your members';
+$_lang['teamlister.members'] = 'Members';
 
 $_lang['teamlister.menu_desc'] = 'List members of your team.';
 $_lang['teamlister.row_order'] = 'Ordering by Drag & Drop is not yet available.';
@@ -66,5 +67,5 @@ $_lang['teamlister.section_menuindex'] = 'Order';
 $_lang['teamlister.section_remove'] = 'Delete team';
 $_lang['teamlister.section_remove_confirm'] = 'Are you sure you want to remove this team?';
 $_lang['teamlister.section_update'] = 'Update team infos';
-$_lang['teamlister.sections'] = 'Your teams';
+$_lang['teamlister.sections'] = 'Teams';
 $_lang['teamlister.sections_intro_msg'] = 'Create sections for your teams.';
