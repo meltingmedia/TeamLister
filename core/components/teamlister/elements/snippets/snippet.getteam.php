@@ -4,6 +4,8 @@
  *
  * Get sections (teams) details.
  *
+ * @var modX $modx
+ * @var array $scriptProperties
  * @package teamlister
  */
 $TeamLister = $modx->getService('teamlister','TeamLister',$modx->getOption('teamlister.core_path',null,$modx->getOption('core_path').'components/teamlister/').'model/teamlister/',$scriptProperties);
